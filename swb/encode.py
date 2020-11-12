@@ -2,7 +2,7 @@
 # coding: utf-8
 
 
-def encode(text, bit_swap=1):
+def encode(text):
     bits = list(bin(ord(c))[2:].zfill(8) for c in text)
     if len(bits) % 2 == 1:
         bits.append(''.zfill(8))

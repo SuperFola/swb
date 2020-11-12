@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # coding: utf-8
 
-def decode(text, bit_swap=1):
+def decode(text):
     bits = [bin(ord(c))[2:].zfill(8) for c in text]
     out = []
 

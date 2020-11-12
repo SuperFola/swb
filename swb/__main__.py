@@ -7,19 +7,13 @@ from .decode import decode
 
 
 def main(args):
-    if args[0] == "-e":
-        e = encode(''.join(args[1:]))
+    if len(args) > 0:
+        e = encode(''.join(args))
         print(e)
         print(decode(e))
-    elif args[0] == "-d":
-        pass
     else:
         print("""Usage:
-    python3 -m swb OPTION text...
-
-OPTION
-    -e        Encode the text
-    -d        Decode the text
+    python3 -m swb text...
 
 PARAMETERS
     text...   text splitted by a single space between
